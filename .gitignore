@@ -15,7 +15,7 @@ crash.log
 # example.tfvars
 
 key_priv_pub
-key_priv_pub.key
+key_priv_pub.pub
 tom-key.pem
 
 # Ignore override files as they are usually used to override resources locally and so

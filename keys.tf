@@ -19,3 +19,4 @@ resource "aws_key_pair" "generated_key_students" {
   public_key = tls_private_key.privkey[count.index].public_key_openssh
 
 }
+

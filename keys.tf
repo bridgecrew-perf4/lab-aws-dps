@@ -1,5 +1,5 @@
-resource "tls_private_key" "privkey" {
-  count     =    var.instance_count
+resource "tls_private_key" "keys" {
+  count     = var.instance_count
   algorithm = "RSA"
   rsa_bits  = 4096
 }
@@ -16,6 +16,8 @@ resource "aws_key_pair" "generated_key_students" {
 
   count      = var.instance_count
   key_name   = "student-${count.index}-key-pair"
-  public_key = tls_private_key.privkey[count.index].public_key_openssh
+  public_key = tls_private_key.keys[count.index].public_key_openssh
+ # private_key = tls_private_key.keys[count.index].private_key_pem
 
 }
+

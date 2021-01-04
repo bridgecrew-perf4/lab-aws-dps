@@ -1,13 +1,12 @@
-# lab-aws-dps
-Quick Terraform Lab
+# Quick Terraform Lab
 
-Simple Lab for N students
+## Simple Lab for N students
 
 In the variables.tf, you may find
 
-variable instance_count {
-  default = 5
-}
+  variable instance_count {
+    default = 5
+  }
 
 
 Change it to get more student Lab or less
